@@ -18,3 +18,18 @@ Of the 4 parameters, 3 (attack, decay, and release) are time-related, and the 4t
 * **Attack** sets the length of time required for the envelope to go from 0V to its maximum voltage. The attack state of the envelope begins when GATE goes from LOW to HIGH.
 * **Decay** sets the length of time required for the envelope to go from its maximum voltage to a voltage set by **sustain**.
 * **Release** sets the length of time required for the envelope to go from its sustain level to 0V when GATE goes from HIGH to LOW.
+
+##First ADSR
+I decided to build Jonathan Jacky's ADSR circuit because it's one of the simplest ADSRs I've seen and because many more complex ADSRs have been built around it. [This article](http://www.yusynth.net/archives/Electronics/J-Jacky-ADSR-1980.pdf) gives a good description of the circuit. The timing diagram in the article is also helpful for understanding how GATE and TRIGGER CVs operate the ADSR EG.
+
+After I breadboarded the circuit I wanted to test it immediately, so I wrote a simple [Arduino script](/arduino/write_gate_and_trig.ino) to mimic the GATE and TRIGGER CVs required by the EG. This script also reads the ADSR EG's output so you can plot it in the Serial Plotter tool inside the Arduino IDE. This is an example of what you might see:
+
+![arduinoIDEscreenshot](/images/arduinoIDEscreenshot.JPG)
+
+I recorded a video to show how the envelope changes as I adjust the 4 parameters:
+
+[![serialPlotterVideo](/images/video_links/serialPlotterVideo.JPG)](https://drive.google.com/open?id=0B5OA5X2encENR3VQa1g4UEY4YmM)
+
+Once I was convinced the ADSR EG was working well, I plugged it in to the cutoff CV input on my synth's voltage-controlled filter (VCF) and recorded another video:
+
+[![fakeGateAndTrigVideo](/images/video_links/fakeGateAndTrigVideo.JPG)](https://drive.google.com/open?id=0B5OA5X2encENc3hNTU1CRGI0LWs)
