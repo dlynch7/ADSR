@@ -24,7 +24,7 @@ ADSR EGs often come with an additional control to set the maximum voltage of the
 ##First ADSR
 I decided to build Jonathan Jacky's ADSR circuit because it's one of the simplest ADSRs I've seen and because many more complex ADSRs have been built around it. [This article](http://www.yusynth.net/archives/Electronics/J-Jacky-ADSR-1980.pdf) gives a good description of the circuit. The timing diagram in the article is also helpful for understanding how GATE and TRIGGER CVs operate the ADSR EG.
 
-After I breadboarded the circuit I wanted to test it immediately, so I wrote a simple [Arduino script](/arduino/write_gate_and_trig.ino) to mimic the GATE and TRIGGER CVs required by the EG. This script also reads the ADSR EG's output so you can plot it in the Serial Plotter tool inside the Arduino IDE. This is an example of what you might see:
+After I breadboarded the circuit I wanted to test it immediately, so I wrote a simple [Arduino script](/arduino/write_gate_and_trig/write_gate_and_trig.ino) to mimic the GATE and TRIGGER CVs required by the EG. This script also reads the ADSR EG's output so you can plot it in the Serial Plotter tool inside the Arduino IDE. This is an example of what you might see:
 
 ![arduinoIDEscreenshot](/images/arduinoIDEscreenshot.JPG)
 
