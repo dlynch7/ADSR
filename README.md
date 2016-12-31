@@ -13,3 +13,8 @@ To sum things up, without EGs, synthesizers would be _very_ boring since they wo
 Hopefully now you're convinced that envelope generators are a worthwhile enterprise and you're wondering what _attack_, _decay_, _sustain_, and _release_ actually mean. Here's a picture that will complement the descrition below:
 
 ![adsr_explanation](/images/adsr_explanation.png)
+
+Of the 4 parameters, 3 (attack, decay, and release) are time-related, and the 4th (sustain) is a voltage.
+* **Attack** sets the length of time required for the envelope to go from 0V to its maximum voltage. The attack state of the envelope begins when GATE goes from LOW to HIGH.
+* **Decay** sets the length of time required for the envelope to go from its maximum voltage to a voltage set by **sustain**.
+* **Release** sets the length of time required for the envelope to go from its sustain level to 0V when GATE goes from HIGH to LOW.
