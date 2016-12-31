@@ -19,6 +19,8 @@ Of the 4 parameters, 3 (attack, decay, and release) are time-related, and the 4t
 * **Decay** sets the length of time required for the envelope to go from its maximum voltage to a voltage set by **sustain**.
 * **Release** sets the length of time required for the envelope to go from its sustain level to 0V when GATE goes from HIGH to LOW.
 
+ADSR EGs often come with an additional control to set the maximum voltage of the ADSR. This can be done by connecting the EG's output to a variable-gain non-inverting amplifier.
+
 ##First ADSR
 I decided to build Jonathan Jacky's ADSR circuit because it's one of the simplest ADSRs I've seen and because many more complex ADSRs have been built around it. [This article](http://www.yusynth.net/archives/Electronics/J-Jacky-ADSR-1980.pdf) gives a good description of the circuit. The timing diagram in the article is also helpful for understanding how GATE and TRIGGER CVs operate the ADSR EG.
 
